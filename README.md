@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love for You</title>
+    <style>
+        body { 
+            font-family: 'Dancing Script', cursive; 
+            background: linear-gradient(135deg, #ffe6e6, #ffb3ba, #ffddf4); 
+            text-align: center; 
+            padding: 50px; 
+            color: #d63384; 
+            position: relative;
+            overflow-x: hidden; 
+        }
+        
+        /* Floating Emojis */
+        body::before { content: '💖'; position: absolute; top: 10%; left: 10%; font-size: 2em; opacity: 0.4; animation: float 3s ease-in-out infinite; }
+        body::after { content: '💕'; position: absolute; bottom: 10%; right: 10%; font-size: 2em; opacity: 0.4; animation: float 4s ease-in-out infinite reverse; }
+        .emoji1 { content: '❤️'; position: absolute; top: 20%; right: 20%; font-size: 1.5em; opacity: 0.3; animation: float 5s ease-in-out infinite; }
+        .emoji2 { content: '💘'; position: absolute; bottom: 30%; left: 15%; font-size: 1.8em; opacity: 0.3; animation: float 6s ease-in-out infinite reverse; }
+        .emoji3 { content: '💞'; position: absolute; top: 50%; left: 50%; font-size: 1.6em; opacity: 0.3; animation: float 4.5s ease-in-out infinite; }
+        @keyframes float { 
+            0%, 100% { transform: translateY(0) rotate(0deg); } 
+            50% { transform: translateY(-15px) rotate(5deg); } 
+        }
 
+        h1 { 
+            color: #ff69b4; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1), 0 0 10px rgba(255,105,180,0.5); 
+            font-size: 3em; 
+        }
+        img { 
+            width: 300px; 
+            height: 300px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            margin: 15px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 0 15px rgba(255,182,193,0.3); 
+            transition: transform 0.3s, box-shadow 0.3s; 
+        }
+        img:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3), 0 0 20px rgba(255,105,180,0.6); 
+        }
+        .gallery { 
+            display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;
+        }
+        
+        /* VIDEO STYLE */
+        video {
+            max-width: 90%; 
+            width: 560px; 
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 5px solid white;
+            margin: 20px 0;
+            background: black; /* Placeholder background */
+        }
+
+        .message { 
+            font-size: 1.6em; margin: 30px auto; max-width: 800px;
+            background: rgba(255,255,255,0.6); 
+            padding: 30px; border-radius: 25px; 
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1), 0 0 10px rgba(255,182,193,0.4); 
+            position: relative; 
+        }
+        button { 
+            background: linear-gradient(45deg, #ff69b4, #ffb3ba, #ffddf4); 
+            color: white; border: none; padding: 15px 40px; 
+            font-size: 1.5em; border-radius: 50px; cursor: pointer; 
+            transition: all 0.3s; margin-top: 20px; font-family: 'Dancing Script', cursive;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 0 15px rgba(255,105,180,0.5); 
+        }
+        button:hover { 
+            background: linear-gradient(45deg, #ffb3ba, #ffddf4, #ff69b4); 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3), 0 0 20px rgba(255,105,180,0.7); 
+        }
+        
+        /* UPDATED OVERLAY STYLE */
+        #heartOverlay { 
+            position: fixed; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            /* Soft semi-transparent gradient */
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.95), rgba(219, 112, 147, 0.95));
+            backdrop-filter: blur(5px); /* Creates a nice frosted glass effect */
+            display: none; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 9999; 
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* The text inside the overlay */
+        #heartOverlay h2 {
+            font-family: 'Dancing Script', cursive; /* Beautiful font */
+            font-size: 2.5em; /* Smaller, more elegant size */
+            color: white;
+            text-shadow: 0 0 10px #ff1493, 0 0 20px #ff69b4; /* Glowing text effect */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        
+        /* Animation for fading in */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="emoji1"></div>
+    <div class="emoji2"></div>
+    <div class="emoji3"></div>
+    
+    <audio id="loveSong" loop>
+        <source src="grover washington jr - just the two of us (TikTok Remix) [Lyrics].mp3" type="audio/mpeg">
+    </audio>
+
+    <h1>I Love You 💕</h1>
+    
+    <p class="message">
+        ✨ Dear Mayssem, ✨<br>
+        From our first date to forever... <br>
+        <strong>Nhebk barcha y rouhy ❤️❤️❤️.</strong><br>
+        Every moment with you is a treasure.
+    </p>
+    
+    <div class="gallery">
+        <img src="WhatsApp Image 2025-12-27 at 2.57.56 AM.jpeg" alt="Memory 1">
+        <img src="WhatsApp Image 2025-12-27 at 2.57.42 AM.jpeg" alt="Memory 2">
+        <img src="WhatsApp Image 2025-12-27 at 2.57.15 AM.jpeg" alt="Memory 3">
+    </div>
+    
+    <h2>Our Memories in Motion 💖</h2>
+    
+    <video controls playsinline>
+        <source src="619cd19a-3e8c-43bd-b353-eb40467b1ad6.mp4" type="video/mp4">
+        <source src="619cd19a-3e8c-43bd-b353-eb40467b1ad6.mp4" type="video/quicktime">
+        Your browser does not support the video tag.
+    </video>
+    
+    <br><br>
+    <button onclick="showHeart()">Click to Play Our Song 💘</button>
+    
+    <div id="heartOverlay">
+        <h2>✨ NAACHKEK Y ROUHY NTY ✨<br>❤️💕💖</h2>
+    </div>
+    
+    <script>
+        function showHeart() {
+            var music = document.getElementById("loveSong");
+            // Attempt to play music
+            music.play().catch(error => {
+                console.log("Audio playback failed (usually due to browser settings): " + error);
+            });
+            
+            const overlay = document.getElementById('heartOverlay');
+            overlay.style.display = 'flex';
+            
+            // Overlay disappears after 5 seconds
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
